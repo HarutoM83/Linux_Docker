@@ -32,7 +32,7 @@ services:
       - mysql
 
   storage:
-    build: ./docker/storage
+    build: ./storage
     volumes:
       - ./storage:/storage
       - ./.ssh/test_rsa.pub:/root/.ssh/authorized_keys
