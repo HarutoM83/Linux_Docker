@@ -29,6 +29,3 @@ try {
     echo "データベースエラー: " . $e->getMessage();
 }
 ?>
-
-実行URL
-http://localhost/get_students.php

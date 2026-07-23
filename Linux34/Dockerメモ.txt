@@ -1,3 +1,14 @@
+実行URL
+http://localhost/
+http://localhost/info.php
+http://localhost/test.php
+http://localhost/get_test_db_1.php
+http://localhost/get_test_db_2.php
+http://localhost/get_students.php
+http://localhost/register_form.html
+http://localhost/get_students.php
+
+
 data_user password:data
           password:p@ssword
 

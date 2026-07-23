@@ -53,6 +53,3 @@ if ($result) {
 $mysql->close();
 
 ?>
-
-実行URL
-http://localhost/get_test_db_1.php
