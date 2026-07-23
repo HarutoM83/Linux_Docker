@@ -1,0 +1,26 @@
+data_user password:data
+          password:p@ssword
+
+・Docker起動
+	docker-compose up -d --build
+・Docker mysqlコンテナログイン
+	docker-compose exec mysql bash
+・削除コマンド
+	docker stop $(docker ps -q)
+	docker rm $(docker ps -q -a)
+	docker rmi $(docker images -q)
+	docker volume rm $(docker volume ls -qf dangling=true)
+・phpコンテナログイン
+	docker-compose exec php-apache bash
+・mysqlコマンド
+	mysql -hmysql -uroot -p
+・userが入ってない時、消えた時、調査用
+（MySQL）
+　	select user,host from mysql.user;
+（docker-compose exec mysql bash）
+　	ls /root/initialize.sql
+　	cat /root/initialize.sql 
+　	mysql -uroot -p < /root/initialize.sql 
+
+ 
+
