@@ -31,7 +31,9 @@ data_user password:data
 （docker-compose exec mysql bash）
 　	ls /root/initialize.sql
 　	cat /root/initialize.sql 
-　	mysql -uroot -p < /root/initialize.sql 
+　	mysql -uroot -p < /root/initialize.sql
+・memcachedコンテナログイン
+  docker-compose exec memcached bash        
 
  
 
