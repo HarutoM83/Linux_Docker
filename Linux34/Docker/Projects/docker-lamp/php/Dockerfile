@@ -20,3 +20,13 @@ RUN apt-get update && apt-get install -y \
 # Apacheの設定ファイルをコピー
 COPY ./php_apache2.conf /etc/apache2/mods-enabled/
 RUN apache2ctl restart
+
+RUN apt-get update && apt-get install -y \
+    autoconf \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN pecl install redis-4.2.0 \
+    && docker-php-ext-enable redis
+
+COPY . /var/www/html/
