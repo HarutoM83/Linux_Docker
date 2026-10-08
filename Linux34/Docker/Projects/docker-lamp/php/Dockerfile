@@ -26,7 +26,8 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && rm -rf /var/lib/apt/lists/*
 
-RUN pecl install redis-4.2.0 \
+# 【変更点】バージョン指定を外し、PHP 8.2に適合する最新版を自動インストールさせる
+RUN pecl install redis \
     && docker-php-ext-enable redis
 
 COPY . /var/www/html/
