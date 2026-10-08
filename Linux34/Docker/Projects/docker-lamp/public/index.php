@@ -26,7 +26,7 @@
 
         // WebSocket接続の確立
         // Docker Composeでwebsocket-serverサービス名でアクセスできるようになる
-        const socket = new WebSocket('ws://localhost:8080'); // または ws://YOUR_DOCKER_HOST_IP:8080
+        const socket = new WebSocket('ws://localhost:8181'); // または ws://YOUR_DOCKER_HOST_IP:8080
 
         socket.onopen = function(event) {
             console.log('WebSocket接続が確立されました。');
